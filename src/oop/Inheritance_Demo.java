@@ -13,6 +13,12 @@ import java.util.Scanner;
                   |
                   B    child class / sub class / derived class
 
+        2) Multilevel Inheritance : continous Chain of Single Inheritance.
+                A
+                |
+                B
+                |
+                C
 
 
 
@@ -76,19 +82,46 @@ class Employee_info extends Personal_info
     }
 
 }
+class Dmart extends Employee_info
+{
+    String location;
+
+    void setLocation()
+    {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter Location :");
+        location=scanner.next();
+    }
+    void getLocation()
+    {
+        System.out.println("Location :"+location);
+    }
+}
+
 
 public class Inheritance_Demo
 {
     public static void main(String[] args) {
 
         ArrayList<Employee_info> employees=new ArrayList<>();
+// single inheritance
+//        Employee_info emp=new Employee_info();
+//        emp.setPersonal_info();
+//        emp.setSalary();
+//
+//        emp.getPersonal_info();
+//        emp.getSalary();
 
-        Employee_info emp=new Employee_info();
-        emp.setPersonal_info();
-        emp.setSalary();
+        // multilevel inheritance
+        Dmart dmart=new Dmart();
+        dmart.setPersonal_info();
+        dmart.setSalary();
+        dmart.setLocation();
 
-        emp.getPersonal_info();
-        emp.getSalary();
+
+        dmart.getPersonal_info();
+        dmart.getSalary();
+        dmart.getLocation();
 
 
     }
