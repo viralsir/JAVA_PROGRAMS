@@ -19,7 +19,10 @@ import java.util.Scanner;
                 B
                 |
                 C
-
+        3) Hyrarchical Inheritance : more than one object can access or get the properties of same object.
+                               A
+                          |         |
+                          B         C
 
 
      class A
@@ -82,6 +85,22 @@ class Employee_info extends Personal_info
     }
 
 }
+class Customer extends  Personal_info
+{
+    int billamount;
+
+    void setBillamount()
+    {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter Bill Amount :");
+        billamount=scanner.nextInt();
+    }
+    void getBilllamount()
+    {
+        System.out.println("bill Amount :"+billamount);
+    }
+
+}
 class Dmart extends Employee_info
 {
     String location;
@@ -113,15 +132,38 @@ public class Inheritance_Demo
 //        emp.getSalary();
 
         // multilevel inheritance
-        Dmart dmart=new Dmart();
-        dmart.setPersonal_info();
-        dmart.setSalary();
-        dmart.setLocation();
+//        Dmart dmart=new Dmart();
+//        dmart.setPersonal_info();
+//        dmart.setSalary();
+//        dmart.setLocation();
+//
+//
+//        dmart.getPersonal_info();
+//        dmart.getSalary();
+//        dmart.getLocation();
+
+        // hyrarchical inheritance
+        Employee_info emp=new Employee_info();
+        Customer customer=new Customer();
+
+        System.out.println("Employee :");
+        emp.setPersonal_info();
+        emp.setSalary();
+
+        System.out.println("Customer");
+        customer.setPersonal_info();
+        customer.setBillamount();
+
+        System.out.println("output :");
+        System.out.println("Employee :");
+        emp.getPersonal_info();
+        emp.getSalary();
+
+        System.out.println("Customer:");
+        customer.getPersonal_info();
+        customer.getBilllamount();
 
 
-        dmart.getPersonal_info();
-        dmart.getSalary();
-        dmart.getLocation();
 
 
     }
