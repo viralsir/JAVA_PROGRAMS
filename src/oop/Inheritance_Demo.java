@@ -24,6 +24,19 @@ import java.util.Scanner;
                           |         |
                           B         C
 
+        4) Multiple Inheritance : one object can access or get the properties of more than one object at a time.
+                       in java one object can access or get only one object at a time .
+                       in java multiple inheritance is not supported.
+
+         5) Hybrid Inheritance : combination of more than one inheritance is called hybrid inheritance.
+
+                        A
+                        |
+                        B
+                  |          |
+                  C         D
+
+
 
      class A
      {
