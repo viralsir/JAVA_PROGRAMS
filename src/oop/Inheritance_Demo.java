@@ -38,6 +38,7 @@ import java.util.Scanner;
 
 
 
+
      class A
      {
         int noA;
