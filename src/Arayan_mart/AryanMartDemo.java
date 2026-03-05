@@ -25,8 +25,16 @@ package Arayan_mart;
  */
 
 
+import oop.Employee;
+import oop.objectmemberdemo;
+
+//import oop.*;
+import oop.ticket.Booking;
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class AryanMartDemo
 {
@@ -35,6 +43,8 @@ public class AryanMartDemo
         Scanner scanner=new Scanner(System.in);
         ArrayList<Order> vendors=new ArrayList<>();
         ArrayList<Order> customers=new ArrayList<>();
+        Employee employee=new Employee();
+
         int option1=0,option2=0;
         do {
 
