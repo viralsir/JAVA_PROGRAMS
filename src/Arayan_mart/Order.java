@@ -3,7 +3,7 @@ package Arayan_mart;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Customer extends Personal
+public class Order extends Personal
 {
     int billno;
     String billdate;
@@ -11,7 +11,7 @@ public class Customer extends Personal
     ArrayList<Product> products=new ArrayList<>();
 
 
-    void setCustomer()
+    void setOrder(String title)
     {
         Scanner scanner=new Scanner(System.in);
 
@@ -20,17 +20,17 @@ public class Customer extends Personal
         System.out.println("Enter bill Date:");
         billdate=scanner.next();
 
-        setPersonal("Customer");
+        setPersonal(title);
 
         String option="";
         do {
-             Product product=new Product();
-             product.setProduct();
-             totalamount=totalamount+product.price;
-             products.add(product);
+            Product product=new Product();
+            product.setProduct();
+            totalamount=totalamount+product.price;
+            products.add(product);
 
             System.out.println("Do you want to add another Product(Y/N)?:");
-             option=scanner.next();
+            option=scanner.next();
 
 
         }while(option.equalsIgnoreCase("y"));
@@ -47,12 +47,12 @@ public class Customer extends Personal
 
     }
 
-    void getCustomer()
+    void getOrder(String title)
     {
         System.out.println("bill no:"+billno);
         System.out.println("bill date:"+billdate);
 
-        getPersonal("Customer");
+        getPersonal(title);
 
         System.out.println("ID\t Name\t Qty \t Rate \t Price");
         for(Product product:products)
@@ -66,8 +66,6 @@ public class Customer extends Personal
 
         System.out.println("------------------------------------");
     }
-
-
 
 
 }

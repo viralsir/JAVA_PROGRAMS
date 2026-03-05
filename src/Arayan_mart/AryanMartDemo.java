@@ -1,5 +1,30 @@
 package Arayan_mart;
 
+/*
+ home work :-
+
+ level - 0
+      add search by bill no in sub menu (purchase ,sales )
+ level - 1
+       add update by bill no and delete by bill no in sub menu(purchase,sales)
+ level - 2
+        combine or replace customer , vendor into order
+
+ home work :-
+
+ level - 0
+      add search by bill no in sub menu (purchase ,sales )
+ level - 1
+       add update by bill no and delete by bill no in sub menu(purchase,sales)
+ level - 2
+        combine or replace customer , vendor into order
+
+
+
+
+ */
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,8 +33,8 @@ public class AryanMartDemo
     public static void main(String[] args)
     {
         Scanner scanner=new Scanner(System.in);
-        ArrayList<Vendor> vendors=new ArrayList<>();
-        ArrayList<Customer> customers=new ArrayList<>();
+        ArrayList<Order> vendors=new ArrayList<>();
+        ArrayList<Order> customers=new ArrayList<>();
         int option1=0,option2=0;
         do {
 
@@ -38,8 +63,8 @@ public class AryanMartDemo
                               case 1:
                                      String option3="";
                                      do {
-                                           Vendor vendor=new Vendor();
-                                           vendor.setVendor();
+                                           Order vendor=new Order();
+                                           vendor.setOrder("Vendor");
                                            vendors.add(vendor);
 
                                          System.out.println("Do you want to add another bill?(y/n):");
@@ -49,9 +74,9 @@ public class AryanMartDemo
                                      break;
                               case 2:
                                   System.out.println("\t\t View ");
-                                  for(Vendor vendor:vendors)
+                                  for(Order vendor:vendors)
                                   {
-                                      vendor.getVendor();
+                                      vendor.getOrder("Vendor");
                                   }
                                   break;
                               case 3:
@@ -80,8 +105,8 @@ public class AryanMartDemo
                                 String option3="";
                                 do {
 
-                                    Customer customer=new Customer();
-                                    customer.setCustomer();
+                                    Order customer=new Order();
+                                    customer.setOrder("Customer");
                                     customers.add(customer);
 
                                     System.out.println("Do you want to add another bill?(y/n):");
@@ -91,9 +116,9 @@ public class AryanMartDemo
                                 break;
                             case 2:
                                 System.out.println("\t\t View ");
-                                for(Customer customer:customers)
+                                for(Order customer:customers)
                                 {
-                                    customer.getCustomer();
+                                    customer.getOrder("Customer");
                                 }
                                 break;
                             case 3:
